@@ -1,5 +1,7 @@
 package Exercicios.URI1012;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -11,18 +13,11 @@ public class Main {
 		double c = sc.nextDouble();
 		sc.close();
 		
-		Triangle tri = new Triangle(a, c);
-		Circle cir = new Circle(c);
-		Trapeze trap = new Trapeze(a, b, c);
-		Square squa = new Square(b, b);
-		Rectangle req = new Rectangle(a, b);
+		List<Shape> shapes = Arrays.asList(new Triangle(a, c), new Circle(c), new Trapeze(a, b, c), new Square(b, b),new Rectangle(a, b) );
 		
-		System.out.printf("TRIANGULO: %.3f%n", tri.getArea());
-		System.out.printf("CIRCULO: %.3f%n", cir.getArea());
-		System.out.printf("TRAPEZIO: %.3f%n", trap.getArea());
-		System.out.printf("QUADRADO: %.3f%n", squa.getArea());
-		System.out.printf("RETANGULO: %.3f%n", req.getArea());
-
+//		for(Shape shape : shapes) {
+//			System.out.println(shape);
+//		}
+		shapes.stream().forEach(System.out::println);
 	}
-
 }

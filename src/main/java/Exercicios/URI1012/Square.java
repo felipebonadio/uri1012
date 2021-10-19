@@ -1,6 +1,6 @@
 package Exercicios.URI1012;
 
-public class Square {
+public class Square extends Shape{
 	private double sideA;
 	private double sideB;
 	
@@ -19,6 +19,10 @@ public class Square {
 	
 	public double getArea() {
 		return sideA*sideB;
+	}
+	@Override
+	public String toString() {
+		return String.format("QUADRADO: %.3f",getArea());
 	}
 	
 

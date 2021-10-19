@@ -1,6 +1,6 @@
 package Exercicios.URI1012;
 
-public class Trapeze {
+public class Trapeze extends Shape {
 	private double baseA;
 	private double baseB;
 	private double height;
@@ -26,6 +26,11 @@ public class Trapeze {
 		this.height = height;
 	}
 	
+	@Override
+	public String toString() {
+		return String.format("TRAPEZIO: %.3f", getArea());
+	}
+
 	public double getArea() {
 		return ((baseA + baseB) * height)/2;
 	}
