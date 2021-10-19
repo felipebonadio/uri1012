@@ -17,5 +17,4 @@ public class RectangleTest {
 		Rectangle rec = new Rectangle(12.7, 10.4);
 		assertEquals(132.080, rec.getArea(), 0.001);
 	}
-
 }
